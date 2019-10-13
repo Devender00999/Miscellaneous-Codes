@@ -1,0 +1,65 @@
+<!-- Created by Donna-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, height=device-height initial-scale=1.0" user-scalable="yes">
+        <title>Page Title</title>
+    </head>
+    <body>
+    <div id="bgn">
+       <p id="bn">Help for Periodic Elements</p>
+ <div id="scl">
+    <p id="hd"><br/>Find the name<br/>of an element</p><br/>
+    <div id="ght">
+    <div id="shf">
+    <br/>
+      <input type="number" id="el" placeholder="Search"/><p onclick="sr()" id="sh">GO!</p>
+      </div>
+      <div style="padding-left:20px;">
+      <span style="color:grey" onclick="rdy()" id='spn'><div id="pr">Display Box</div><br/></span></div>
+      </div>
+       </div>
+  <div id="one">
+    <p id="hdi"><br/>Find the number<br/>of an element</p><br/>
+    <div id="ght1">
+    <div id="shf1">
+    <br/>
+      <input type="text" id="el1" placeholder="Search"/><p onclick="srm()" id="sh1">GO!</p>
+      </div>
+      <div style="padding-left:20px;">
+      <span style="color:grey" onclick="rd()" id='spn1'><div id="pr1">Display Box</div><br/></span></div>
+      </div>
+      </div>
+        </div>
+        <!-- Ending -->
+        <script>
+        var a=["Hydrogen","Helium","Lithium","Beryllium","Boron","Carbon","Nitrogen","Oxygen","Fluorine","Neon","Sodium","Magnesium","Aluminium","Silicon","Phosphorus","Sulphur","Chlorine","Argon","Potassium","Calcium","Scandium","Titanium","Vanadium","Chromium","Manganese","Iron","Cobalt","Nickel","Copper","Zinc","Gallium","Germanium","Arsenic","Selenium","Bromine","Krypton","Rubidium","Strontium","Yttrium","Zirconium","Niobium","Molybdenum","Technetium","Ruthenium","Rhodium","Palladium","Silver","Cadmium","Indium","Tin","Antimony","Tellurium","Iodine","Xenon","Caesium","Barium","Lanthanum","Cerium","Praseodymium","Neodymium","Promethium","Samarium","Europium","Gadolinium","Terbium","Dysprosium","Holmium","Erbium","Thulium","Ytterbium","Lutetium","Hafnium","Tantalum","Tungsten","Rhenium","Osmium","Iridium","Platinum","Gold","Mercury","Thallium","Lead","Bismuth","Polonium","Astatine","Radon","Francium","Radium","Actinium","Thorium","Protactinium","Uranium","Neptunium","Plutonium","Americium","Curium","Berkelium","Califomium","Einstenium","Fermium","Mendelevium","Noblium","Lawrencium","Rutherfordium","Dubnium","Seaborguim","Bohrium","Hassium","Meitnerium","Damstacium","Roentgentium","Copernicium","Ununtrium","Flerovium","Ununpentium","Livermonium","Ununseptium","Ununoctium"];
+function rd(){ alert('Enter the name of any element');}
+function rdy(){ alert('Enter the number of element');}
+function sr(){
+     var d=document.getElementById('el').value,d2=parseInt(d);
+     if(d2>0&&d2<119){
+        document.getElementById('pr').innerHTML=a[d2-1];
+        document.getElementById('spn').style.color='black';
+        }
+     else{
+        document.getElementById('pr').innerHTML="Display Box";
+        document.getElementById('spn').style.color='grey';
+     }
+}function srm(){
+     var d=document.getElementById('el1').value,h=0;
+     for(var i=0;i<a.length;i++)
+     if(d.toUpperCase()===a[i].toUpperCase())
+           h=i+1;
+     if(h>0&&h<119){
+        document.getElementById('pr1').innerHTML=h;
+        document.getElementById('spn1').style.color='black';
+    }else{
+        document.getElementById('pr1').innerHTML="Display Box";
+        document.getElementById('spn1').style.color='grey';
+    }
+}
+        </script>
+    </body>
+</html>

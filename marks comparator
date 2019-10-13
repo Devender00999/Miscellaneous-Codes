@@ -1,0 +1,35 @@
+import java.util.*;
+class Student
+{
+    public static void main(String[] args) {
+        int c1=0,c2=0,c3=0;
+        int marks []=new int [13];
+        System.out.println("\nEnter total number of students : Limit is 12");
+        //Limit is 12
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        //Input must be in Integer
+        for(int i=1;i<=num;i++)
+        {
+//This line works good at PC but no at SL: System.out.println("Enter marks of Student"+i+" =: ");
+            marks[i]=sc.nextInt();
+            if(marks[i] >= 81)
+            {
+                c1=c1+1;
+            }
+            if(marks[i]>=61 && marks [i]<=80)
+            {
+                c2=c2+1;
+            }
+            if(marks[i]<=60 && marks[i]>=0)
+            {
+                c3=c3+1;
+            }
+
+        }
+        System.out.println("\n");
+        System.out.println("Number of Student who get marks between 81 to 100 ="+c1);
+        System.out.println("Number of Student who get marks between 60 to 80 ="+c2);
+        System.out.println("Number of Student who get marks between 0 to 60 ="+c3);
+    }
+}
